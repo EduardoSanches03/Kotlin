@@ -1,6 +1,7 @@
 package Controllers
 
 import Config.Config
+import Models.Cliente
 import Models.Venda
 import Views.MenuVenda
 import Views.clienteController
@@ -8,9 +9,16 @@ import Views.produtoController
 
 class VendaController {
 
+    val teste = produtoController.listaProtudos[0]
+    val teste2 = clienteController.listaClientes[0]
+
     val listaVendas = mutableListOf<Venda>()
     val gerarId = Config();
     val retornar = MenuVenda()
+
+    init {
+        listaVendas.add(Venda("TESTE", teste, teste2, 5000.0))
+    }
 
     fun realizarVenda(){
         println("Informe o cpf do cliente: ")
