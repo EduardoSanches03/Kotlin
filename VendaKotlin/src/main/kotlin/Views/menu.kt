@@ -2,6 +2,7 @@ package Views
 
 val menuCliente = menuClientes()
 val menuProdutos = menuProduto()
+val menuVenda = MenuVenda()
 
 class menuInicial {
 
@@ -15,6 +16,7 @@ class menuInicial {
         when (opcao) {
             "1" -> menuCliente.mostrarMenu();
             "2" -> menuProdutos.mostrarMenu()
+            "3" -> menuVenda.mostrarMenu()
         }
 
     }
